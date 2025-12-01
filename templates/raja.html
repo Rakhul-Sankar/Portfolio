@@ -84,12 +84,13 @@
                 </div>
 
                 <div class="contact-right">
-                    <form>
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <textarea rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Send</button>
-                    </form>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
+                    <input type="text" name="name" required>
+                    <input type="email" name="email" required>
+                    <textarea name="message" required></textarea>
+                    <button type="submit">Submit</button>
+                     </form>
                 </div>
 
             </div>
