@@ -150,7 +150,7 @@ nav ul li a:hover::after{
     width: 50%;
 }
 
-tab-contents {
+.tab-contents {
     list-style: none;
     margin:10px 0;
 }
@@ -282,7 +282,7 @@ nav ul{
 }
 
 .github-icon {
-    font-size: 70px;
+    font-size: 40px;
     color: white;
     transition: 0.3s ease;
 }
@@ -293,7 +293,7 @@ nav ul{
 }
 
 .mail-icon {
-    font-size: 70px;
+    font-size: 40px;
     color: white;
     transition: 0.3s ease;
 }
