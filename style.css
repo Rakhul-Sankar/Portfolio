@@ -281,13 +281,4 @@ nav ul{
      
 }
 
-.github-icon {
-    font-size: 40px;
-    color: white;
-    transition: 0.3s ease;
-}
 
-.github-icon:hover {
-    color: #bfbfbf; /* light gray hover color */
-    transform: scale(1.1);
-}
