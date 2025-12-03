@@ -16,8 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
-    <!-- ICON -->
-    <link rel="icon" type="image/jpeg" href="mywebsite/logo.jpg">
+     <!-- Multiple formats for all browsers -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+    <link rel="icon" type="image/png" href="logo.png">
+
+
 
 </head>
 
@@ -38,8 +41,7 @@
             </nav>
 
             <div class="header-text">
-                <h1>Hi, I'm <span>Rakhul</span> Sankar from <br>Chennai</h1>
-                <p>Welcome to my portfolio website. I'm a passionate learner in the field of web development and programming. Explore my skills!</p>               
+                <h1>Hi, I'm <span>Rakhul</span> Sankar from <br>Chennai</h1>             
             </div>
         </div>
     </div>
@@ -49,7 +51,8 @@
         <div class="container">
             <div class="row">
                 <div class="about-col1">
-                    <img src="mywebsite/rakhul3.png" type = "image/png"alt="">
+                    <!-- FIXED: Proper attributes + alt text -->
+                    <img src="mywebsite/rakhul3.png" alt="Rakhul Sankar Profile Photo" loading="lazy" width="300" height="400">
                 </div>
 
                 <div class="about-col2">
@@ -62,7 +65,7 @@
                 <i class="fa-solid fa-file-pdf"></i> Download My Resume
                 </a>
                 </div>
-                
+
                     <div id="portfolio" class="tab-titles">
                         <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                         <p class="tab-links" onclick="opentab('education')">Education</p>
