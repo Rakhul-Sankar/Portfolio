@@ -1,138 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Rakhul</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Rakhul</title>
 
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css">
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- STATIC CSS -->
-    <link rel="stylesheet" href="style.css?v=2">    
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!--Github-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-     <!-- Multiple formats for all browsers -->
-    <link rel="icon" type="image/jpeg" href="logo.jpg">
-    <link rel="icon" type="image/png" href="logo.png">
-
-
-
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 
-<body>
-    <!-- Header -->
-    <div id="header">
-        <div class="container">
-            <nav>
-                <h1 id="rak">Rakhul</h1>
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#ab">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa fa-close" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
+<body class="bg-black text-white font-sans">
 
-            <div class="header-text">
-                <h1>Hi, I'm <span>Rakhul</span> Sankar from <br>Chennai</h1>             
-            </div>
-        </div>
+<!-- ================= HEADER ================= -->
+<header id="header" class="min-h-screen bg-[url('rakhul.jpg')] bg-no-repeat bg-left bg-fixed bg-[length:600px]">
+  <div class="max-w-7xl mx-auto px-6 py-4">
+
+    <!-- NAV -->
+    <nav class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-red-600">Rakhul</h1>
+
+      <ul id="sidemenu" class="hidden md:flex gap-8 text-lg">
+        <li><a href="#header" class="hover:border-b-2 border-red-600">Home</a></li>
+        <li><a href="#about" class="hover:border-b-2 border-red-600">About</a></li>
+        <li><a href="#portfolio" class="hover:border-b-2 border-red-600">Portfolio</a></li>
+        <li><a href="#contact" class="hover:border-b-2 border-red-600">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Menu Icon -->
+      <i class="fa-solid fa-bars text-2xl md:hidden cursor-pointer" onclick="openmenu()"></i>
+    </nav>
+
+    <!-- HERO TEXT -->
+    <div class="text-right mt-40">
+      <h1 class="text-4xl md:text-6xl font-bold">
+        Hi, I'm <span class="text-red-600">Rakhul</span><br>
+        Sankar from Chennai
+      </h1>
     </div>
 
-    <!-- About -->
-    <div id="ab" class="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col1">
-                    <!-- FIXED: Proper attributes + alt text -->
-                    <img src="rakhul3.png" alt="Rakhul Sankar Profile Photo" loading="lazy" width="300" height="500">
-                </div>
+  </div>
+</header>
 
-                <div class="about-col2">
-                    <h1 class="sub">About me</h1>
-                    <p>For the frontend I have learned Python and Java as a beginner, and for the backend I have learned Django as a beginner.</p>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row gap-10 items-center">
 
-                     <!-- OR in #ab .about-col2 (after skills tabs) -->
-                <div class="resume-section">
-                <a href="mywebsite/Rakhul(resume).pdf" class="resume-btn" download>
-                <i class="fa-solid fa-file-pdf"></i> Download My Resume
-                </a>
-                </div>
+      <!-- IMAGE -->
+      <div class="md:w-1/3">
+        <img src="rakhul3.png" alt="Rakhul" class="rounded-lg w-full">
+      </div>
 
-                    <div id="portfolio" class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    
+      <!-- CONTENT -->
+      <div class="md:w-2/3">
+        <h2 class="text-5xl font-bold mb-4">About Me</h2>
+        <p class="text-gray-300 mb-6">
+          For frontend I learned HTML, CSS, JavaScript.
+          For backend I learned Python, Java, and Django (Beginner).
+        </p>
 
-                    <div class="tab-contents active-tab" id="skills">
-                        <p></p>
-                        <span>Python</span><br>Back-end<br><br>
-                        <span>Java</span><br>Back-end<br><br>
-                        <span>HTML,CSS,JS</span><br>Front-end
-                    </div>
+        <!-- Resume Button -->
+        <a href="mywebsite/Rakhul(resume).pdf" download
+           class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition">
+          <i class="fa-solid fa-file-pdf"></i> Download Resume
+        </a>
 
-                    <div class="tab-contents" id="education">
-                        
-                        <span>2008 - 2023</span> Vyasa Vidyalaya Matriculation Higher Secondary School<br><br>
-                        <span>2023-2026</span> Guru Nanak College<br>BSC(IT)
-                    </div>
-
-                </div>
-            </div>
+        <!-- TABS -->
+        <div id="portfolio" class="flex gap-8 mt-8">
+          <button class="text-lg border-b-2 border-red-600">Skills</button>
+          <button class="text-lg">Education</button>
         </div>
+
+        <!-- SKILLS -->
+        <div class="mt-4 text-gray-300">
+          <p><span class="text-red-500">Python</span> – Backend</p>
+          <p><span class="text-red-500">Java</span> – Backend</p>
+          <p><span class="text-red-500">HTML, CSS, JS</span> – Frontend</p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="mt-4 text-gray-300">
+          <p><span class="text-red-500">2008–2023</span> Vyasa Vidyalaya School</p>
+          <p><span class="text-red-500">2023–2026</span> Guru Nanak College – BSc IT</p>
+        </div>
+
+      </div>
     </div>
+  </div>
+</section>
 
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row gap-10">
 
-    <!-- Contact -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <a href="mailto:rakhulsankar@gmail.com">
-                    <i class="fa-solid fa-envelope mail-icon"></i>
-                    </a>
+      <!-- LEFT -->
+      <div class="md:w-1/3">
+        <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
 
-               <a href="https://github.com/Rakhul-Sankar" target="_blank">
-               <i class="fab fa-github github-icon"></i>
-                 </a>
-
-
-                    <p>Phone : 9003261294</p>
-                </div>
-
-                <div class="contact-right">
-                    <form action="https://api.web3forms.com/submit" method="POST">
-                    <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
-                    <input type="text" name="name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class = "btn btn2">Submit</button>
-                     </form>
-                </div>
-
-            </div>
+        <div class="flex gap-6 text-4xl mt-6">
+          <a href="mailto:rakhulsankar@gmail.com" class="hover:text-gray-400">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a href="https://github.com/Rakhul-Sankar" target="_blank" class="hover:text-gray-400">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
 
-        <div class="copyright">
-            <p>Copyright &copy; Rakhul</p>
-        </div>
+        <p class="mt-6 text-gray-300">Phone: 9003261294</p>
+      </div>
+
+      <!-- RIGHT FORM -->
+      <div class="md:w-2/3">
+        <form action="https://api.web3forms.com/submit" method="POST"
+              class="bg-gray-900 p-6 rounded-lg space-y-4">
+
+          <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
+
+          <input type="text" name="name" placeholder="Your Name" required
+                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+
+          <input type="email" name="email" placeholder="Your Email" required
+                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+
+          <textarea name="message" placeholder="Your Message" rows="5" required
+                    class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+
+          <button type="submit"
+                  class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold transition">
+            Submit
+          </button>
+        </form>
+      </div>
+
     </div>
+  </div>
+</section>
 
-    <!-- JS -->
-    <script src="script.js"></script>
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-700 text-center py-4">
+  <p>© Copyright Rakhul</p>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
