@@ -21,19 +21,39 @@
 <header id="header" class="min-h-screen bg-[url('rakhul.jpg')] bg-no-repeat bg-left bg-fixed bg-[length:600px]">
   <div class="max-w-7xl mx-auto px-6 py-4">
 
-    <!-- NAV -->
-    <nav class="flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-red-600">Rakhul</h1>
+  <ul class="hidden md:flex gap-8 text-lg">
+  <li>
+    <a href="#header"
+       class="relative group">
+      Home
+      <span
+        class="absolute left-0 -bottom-1 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full">
+      </span>
+    </a>
+  </li>
 
-      <ul class="hidden md:flex gap-8 text-lg">
-        <li><a href="#header" class="hover:border-b-2 border-red-600 animation">Home</a></li>
-        <li><a href="#about" class="hover:border-b-2 border-red-600 animation">About</a></li>
-        <li><a href="#portfolio" class="hover:border-b-2 border-red-600 animation">Portfolio</a></li>
-        <li><a href="#contact" class="hover:border-b-2 border-red-600 animation">Contact</a></li>
-      </ul>
+  <li>
+    <a href="#about" class="relative group">
+      About
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </li>
 
-      <i class="fa-solid fa-bars text-2xl md:hidden"></i>
-    </nav>
+  <li>
+    <a href="#portfolio" class="relative group">
+      Portfolio
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </li>
+
+  <li>
+    <a href="#contact" class="relative group">
+      Contact
+      <span class="absolute left-0 -bottom-1 h-0.5 w-0 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
+    </a>
+  </li>
+</ul>
+
 
     <!-- HERO -->
     <div class="text-right mt-40">
