@@ -1,13 +1,10 @@
-  /* ================= MOBILE NAV ================= */
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("hidden");
   }
 
-  /* ================= ABOUT TABS ================= */
   function showTab(tab) {
     const skills = document.getElementById("skills");
     const education = document.getElementById("education");
-
     const skillsBtn = document.getElementById("skills-btn");
     const educationBtn = document.getElementById("education-btn");
 
@@ -15,14 +12,18 @@
       skills.classList.remove("hidden");
       education.classList.add("hidden");
 
-      skillsBtn.classList.add("border-b-2", "border-red-600");
-      educationBtn.classList.remove("border-b-2", "border-red-600");
+      skillsBtn.classList.add("border-red-600");
+      educationBtn.classList.remove("border-red-600");
+      educationBtn.classList.add("text-gray-400");
+      skillsBtn.classList.remove("text-gray-400");
     } else {
       education.classList.remove("hidden");
       skills.classList.add("hidden");
 
-      educationBtn.classList.add("border-b-2", "border-red-600");
-      skillsBtn.classList.remove("border-b-2", "border-red-600");
+      educationBtn.classList.add("border-red-600");
+      skillsBtn.classList.remove("border-red-600");
+      skillsBtn.classList.add("text-gray-400");
+      educationBtn.classList.remove("text-gray-400");
     }
   }
 

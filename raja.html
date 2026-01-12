@@ -81,39 +81,56 @@
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex flex-col md:flex-row gap-10 items-center">
 
-
       <div class="w-full">
         <h2 class="text-5xl font-bold mb-4">About Me</h2>
+
         <p class="text-gray-300 mb-6">
-          For frontend I learned HTML, CSS, JavaScript.
-          For backend I learned Python, Java, and Django (Beginner).
+          Java & Python programmer with interest in software testing.
+          I focus on logic building, debugging, and quality assurance.
         </p>
 
         <!-- Resume -->
         <a href="Rakhul_Resume.pdf" download
-           class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition">
+          class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition">
           <i class="fa-solid fa-file-pdf"></i> Download Resume
         </a>
 
-       <!-- TAB CONTENTS -->
-<div id="skills" class="mt-6">
-  <ul class="space-y-2 text-gray-300">
-    <li>• Python</li>
-    <li>• Java</li>
-    <li>• HTML, Tailwind CSS, JavaScript</li>
-  </ul>
-</div>
+        <!-- TABS (VISIBLE LINKS) -->
+        <div class="flex gap-10 mt-8 border-b border-gray-700 pb-2">
+          <button id="skills-btn"
+            onclick="showTab('skills')"
+            class="text-lg font-medium border-b-2 border-red-600 pb-1">
+            Skills
+          </button>
 
-<div id="education" class="mt-6 hidden">
-  <p class="text-gray-300">
-    <span class="font-semibold">2023</span> – BSc (IT)<br><br>
-    <span class="font-semibold">2026</span> – MCA
-  </p>
-</div>
+          <button id="education-btn"
+            onclick="showTab('education')"
+            class="text-lg font-medium text-gray-400 hover:text-white pb-1">
+            Education
+          </button>
+        </div>
+
+        <!-- TAB CONTENTS -->
+        <div id="skills" class="mt-6">
+          <ul class="space-y-2 text-gray-300">
+            <li>• Python</li>
+            <li>• Java</li>
+            <li>• HTML, Tailwind CSS, JavaScript</li>
+          </ul>
+        </div>
+
+        <div id="education" class="mt-6 hidden text-gray-300">
+          <p>
+            <span class="font-semibold">2023</span> – BSc (IT)<br><br>
+            <span class="font-semibold">2026</span> – MCA
+          </p>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
+
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="py-20">
