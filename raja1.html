@@ -1,0 +1,126 @@
+    <!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Rakhul</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpg" href="logo.jpg">
+</head>
+
+<body class="bg-black text-white font-sans">
+
+<!-- ================= NAVIGATION ================= -->
+<nav class="fixed top-0 left-0 w-full bg-black z-50">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+
+    <h1 class="text-4xl md:text-5xl font-bold text-red-600">Rakhul</h1>
+
+    <!-- Desktop Menu -->
+    <div class="hidden md:flex space-x-6">
+      <a href="#header" class="text-white hover:text-red-500 font-medium">Home</a>
+      <a href="#about" class="text-white hover:text-red-500 font-medium">About</a>
+      <a href="#contact" class="text-white hover:text-red-500 font-medium">Contact</a>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden bg-black md:hidden">
+    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">About</a>
+    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Contact</a>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<section
+  id="header"
+  class="min-h-screen pt-32 flex items-center bg-black px-6 scroll-mt-28">
+
+  <div class="max-w-4xl w-full">
+
+    <h1 class="text-4xl md:text-6xl font-bold">
+      Hi, I'm <span class="text-red-600">Rakhul Sankar</span>
+    </h1>
+
+    <h2 class="text-2xl md:text-3xl mt-4 text-gray-300">
+      Java & Python Programmer | Software Tester
+    </h2>
+
+    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
+      I enjoy writing clean logic, debugging applications, and testing software
+      to ensure quality and reliability.
+    </p>
+
+    <div class="mt-10 flex gap-6">
+      <a href="#projects"
+         class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition">
+        View Projects
+      </a>
+
+      <a href="#contact"
+         class="border border-red-600 hover:bg-red-600 px-8 py-4 rounded-lg font-semibold text-lg transition">
+        Contact Me
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section id="about" class="scroll-mt-28 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-5xl font-bold mb-4">About Me</h2>
+
+    <p class="text-gray-300 mb-6 max-w-2xl">
+      Java & Python programmer with interest in software testing.
+      I focus on logic building, debugging, and quality assurance.
+    </p>
+
+    <a href="Rakhul_Resume.pdf" download
+       class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold">
+      <i class="fa-solid fa-file-pdf"></i> Download Resume
+    </a>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="scroll-mt-28 py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h2 class="text-4xl font-bold mb-6">Contact Me</h2>
+
+    <div class="flex gap-6 text-4xl">
+      <a href="mailto:rakhulsankar@gmail.com" class="hover:text-gray-400">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+      <a href="https://github.com/Rakhul-Sankar" target="_blank" class="hover:text-gray-400">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+
+    <p class="mt-6 text-gray-300">Phone: 9003261294</p>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="bg-gray-800 text-center py-4">
+  <p>© Copyright 2026 Rakhul</p>
+</footer>
+
+<!-- ================= JS ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
