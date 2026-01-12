@@ -21,40 +21,73 @@
 <body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
 <!-- ================= NAVIGATION ================= -->
-<nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50">
+<nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 border-b border-gray-200 dark:border-gray-800">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <h1 class="text-4xl md:text-5xl font-bold text-red-600">Rakhul</h1>
+    <!-- Logo -->
+    <h1 class="text-4xl md:text-5xl font-bold text-red-600">
+      Rakhul
+    </h1>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
-      <a href="#header" class="text-white hover:text-red-500 font-medium">Home</a>
-      <a href="#about" class="text-white hover:text-red-500 font-medium">About</a>
-      <a href="#contact" class="text-white hover:text-red-500 font-medium">Contact</a>
-      <button onclick="toggleDarkMode()"
-  class="text-xl ml-4 text-gray-700 dark:text-gray-300 hover:text-red-500 transition">
-  <i id="themeIcon" class="fa-solid fa-moon"></i>
-</button>
+    <div class="hidden md:flex items-center space-x-6">
+      <a href="#header"
+         class="text-gray-900 dark:text-white hover:text-red-500 font-medium transition">
+        Home
+      </a>
+      <a href="#about"
+         class="text-gray-900 dark:text-white hover:text-red-500 font-medium transition">
+        About
+      </a>
+      <a href="#contact"
+         class="text-gray-900 dark:text-white hover:text-red-500 font-medium transition">
+        Contact
+      </a>
 
+      <!-- Dark Mode Toggle -->
+      <button onclick="toggleDarkMode()"
+        class="text-xl ml-2 text-gray-700 dark:text-gray-300 hover:text-red-500 transition">
+        <i id="themeIcon" class="fa-solid fa-moon"></i>
+      </button>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
+    <button onclick="toggleMenu()"
+      class="md:hidden text-gray-900 dark:text-white text-3xl">
       ☰
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden bg-black md:hidden">
-    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Home</a>
-    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">About</a>
-    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Contact</a>
+  <div id="mobileMenu"
+       class="hidden md:hidden bg-white dark:bg-black border-t border-gray-200 dark:border-gray-800">
+
+    <a href="#header"
+       class="block px-6 py-4 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+       onclick="toggleMenu()">
+       Home
+    </a>
+
+    <a href="#about"
+       class="block px-6 py-4 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+       onclick="toggleMenu()">
+       About
+    </a>
+
+    <a href="#contact"
+       class="block px-6 py-4 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800"
+       onclick="toggleMenu()">
+       Contact
+    </a>
+
+    <!-- Dark Mode Toggle (Mobile) -->
     <button onclick="toggleDarkMode()"
-  class="text-xl ml-4 text-gray-700 dark:text-gray-300 hover:text-red-500 transition">
-  <i id="themeIcon" class="fa-solid fa-moon"></i>
-</button> 
-</div>
+      class="w-full text-left px-6 py-4 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+      <i class="fa-solid fa-moon mr-2"></i> Toggle Theme
+    </button>
+  </div>
 </nav>
+
 
 <!-- ================= HERO ================= -->
 <section
