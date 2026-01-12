@@ -1,13 +1,21 @@
-  // Mobile menu
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("hidden");
-  }
+// ================= MOBILE MENU =================
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
 
-  // About tabs
+// ================= ABOUT TABS =================
+document.addEventListener("DOMContentLoaded", () => {
   const skillsBtn = document.getElementById("skills-btn");
   const educationBtn = document.getElementById("education-btn");
   const skills = document.getElementById("skills");
   const education = document.getElementById("education");
+
+  // Safety check (optional but smart)
+  if (!skillsBtn || !educationBtn || !skills || !education) return;
+
+  // Default state
+  skills.classList.remove("hidden");
+  education.classList.add("hidden");
 
   skillsBtn.addEventListener("click", () => {
     skills.classList.remove("hidden");
@@ -30,4 +38,4 @@
     skillsBtn.classList.remove("border-red-600");
     skillsBtn.classList.add("text-gray-400");
   });
-
+});
