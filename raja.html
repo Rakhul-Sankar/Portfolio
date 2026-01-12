@@ -103,17 +103,24 @@
   <button
     type="button"
     id="skills-btn"
-    class="tab-btn text-lg font-medium cursor-pointer pb-2 border-b-2 border-red-600 text-white">
+    class="tab-btn relative text-lg font-medium text-white pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-100 after:origin-left after:transition-transform">
     Skills
   </button>
 
   <button
     type="button"
     id="education-btn"
-    class="tab-btn text-lg font-medium cursor-pointer pb-2 border-b-2 border-transparent text-gray-400">
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
     Education
   </button>
 </div>
+
 
         <!-- TAB CONTENT WRAPPER -->
         <div class="mt-6">

@@ -11,22 +11,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const education = document.getElementById("education");
 
   function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
-    // content
+    // Show / hide content
     showEl.classList.remove("hidden");
     hideEl.classList.add("hidden");
 
-    // active tab
-    activeBtn.classList.remove("border-transparent", "text-gray-400");
-    activeBtn.classList.add("border-red-600", "text-white");
+    // Active tab underline (Tailwind after:)
+    activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
+    activeBtn.classList.add("after:scale-x-100", "text-white");
 
-    // inactive tab
-    inactiveBtn.classList.remove("border-red-600", "text-white");
-    inactiveBtn.classList.add("border-transparent", "text-gray-400");
+    // Inactive tab
+    inactiveBtn.classList.remove("after:scale-x-100", "text-white");
+    inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
   }
 
-  // default tab
+  // Default tab
   setActive(skillsBtn, educationBtn, skills, education);
 
+  // Events
   skillsBtn.addEventListener("click", () => {
     setActive(skillsBtn, educationBtn, skills, education);
   });
