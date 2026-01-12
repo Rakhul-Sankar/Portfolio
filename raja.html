@@ -95,43 +95,21 @@
           <i class="fa-solid fa-file-pdf"></i> Download Resume
         </a>
 
-        <!-- TABS -->
-        <div id="portfolio" class="flex gap-8 mt-8">
-          <button
-            id="skills-btn"
-            onclick="showTab('skills')"
-            class="text-lg border-b-2 border-red-600 pb-1">
-            Skills
-          </button>
+       <!-- TAB CONTENTS -->
+<div id="skills" class="mt-6">
+  <ul class="space-y-2 text-gray-300">
+    <li>• Python</li>
+    <li>• Java</li>
+    <li>• HTML, Tailwind CSS, JavaScript</li>
+  </ul>
+</div>
 
-          <button
-            id="education-btn"
-            onclick="showTab('education')"
-            class="text-lg pb-1">
-            Education
-          </button>
-        </div>
-
-      <div class ="tab-contents active-tab" id = "skills">
-                
-                    <span>Python</span><br>
-                    <br>
-                    <br>
-                    <span>Java</span><br>
-                    <br>
-                    <br>
-                    <span>HTML,tailwindcss,JS</span><br>
-            </div>
-            <br>
-            <div class="tab-contents" id = "education">
-                
-                    <span>2023</span><br>BSC(IT)
-                    <br>
-                    <br>
-                    <span>2026</span><br>MCA
-                    
-            </div>
-
+<div id="education" class="mt-6 hidden">
+  <p class="text-gray-300">
+    <span class="font-semibold">2023</span> – BSc (IT)<br><br>
+    <span class="font-semibold">2026</span> – MCA
+  </p>
+</div>
       </div>
     </div>
   </div>
@@ -192,29 +170,3 @@
 </body>
 </html>
 
-    <!-- NAVIGATION -->
-<nav class="fixed top-0 left-0 w-full bg-black z-50">
-  <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-
-    <h1 class="text-7xl font-bold text-red-600">Rakhul</h1>
-
-    <!-- Desktop Menu --> 
-    <div class="hidden md:flex space-x-4 items-center">
-      <a href="#header" class="text-gray-700 hover:text-purple-600 font-medium px-3 py-2">Home</a>
-      <a href="#about" class="text-gray-700 hover:text-purple-600 font-medium px-3 py-2">About</a>
-      <a href="#contact" class="text-gray-700 hover:text-purple-600 font-medium px-3 py-2">Contact
-    </div>
-
-    <!-- Mobile Hamburger -->
-    <button onclick="toggleMenu()" class="md:hidden text-gray-700 text-2xl">
-      ☰
-    </button>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
-    <a href="#header" class="block px-6 py-3" onclick="toggleMenu()">Home</a>
-    <a href="#about" class="block px-6 py-3" onclick="toggleMenu()">About</a>
-    <a href="#contact" class="block px-6 py-3" onclick="toggleMenu()">Contact</a>
-  </div>
-</nav>
