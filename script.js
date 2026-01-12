@@ -44,6 +44,10 @@ function closemenu(){
     }
   }
 
-function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
-}
+ function openMenu() {
+    document.getElementById("mobileMenu").classList.remove("hidden");
+  }
+
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.add("hidden");
+  }
