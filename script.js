@@ -13,17 +13,19 @@
       education.classList.add("hidden");
 
       skillsBtn.classList.add("border-red-600");
+      skillsBtn.classList.remove("border-transparent", "text-gray-400");
+
       educationBtn.classList.remove("border-red-600");
-      educationBtn.classList.add("text-gray-400");
-      skillsBtn.classList.remove("text-gray-400");
+      educationBtn.classList.add("border-transparent", "text-gray-400");
     } else {
       education.classList.remove("hidden");
       skills.classList.add("hidden");
 
       educationBtn.classList.add("border-red-600");
+      educationBtn.classList.remove("border-transparent", "text-gray-400");
+
       skillsBtn.classList.remove("border-red-600");
-      skillsBtn.classList.add("text-gray-400");
-      educationBtn.classList.remove("text-gray-400");
+      skillsBtn.classList.add("border-transparent", "text-gray-400");
     }
   }
 
