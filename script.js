@@ -10,32 +10,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const skills = document.getElementById("skills");
   const education = document.getElementById("education");
 
-  // Safety check (optional but smart)
-  if (!skillsBtn || !educationBtn || !skills || !education) return;
+  function activateTab(activeBtn, inactiveBtn, showContent, hideContent) {
+    // content
+    showContent.classList.remove("hidden");
+    hideContent.classList.add("hidden");
 
-  // Default state
-  skills.classList.remove("hidden");
-  education.classList.add("hidden");
+    // active underline
+    activeBtn.classList.add("border-red-600", "text-white");
+    activeBtn.classList.remove("border-transparent", "text-gray-400");
+
+    // inactive
+    inactiveBtn.classList.remove("border-red-600", "text-white");
+    inactiveBtn.classList.add("border-transparent", "text-gray-400");
+  }
+
+  // default active
+  activateTab(skillsBtn, educationBtn, skills, education);
 
   skillsBtn.addEventListener("click", () => {
-    skills.classList.remove("hidden");
-    education.classList.add("hidden");
-
-    skillsBtn.classList.add("border-red-600");
-    skillsBtn.classList.remove("text-gray-400");
-
-    educationBtn.classList.remove("border-red-600");
-    educationBtn.classList.add("text-gray-400");
+    activateTab(skillsBtn, educationBtn, skills, education);
   });
 
   educationBtn.addEventListener("click", () => {
-    education.classList.remove("hidden");
-    skills.classList.add("hidden");
-
-    educationBtn.classList.add("border-red-600");
-    educationBtn.classList.remove("text-gray-400");
-
-    skillsBtn.classList.remove("border-red-600");
-    skillsBtn.classList.add("text-gray-400");
+    activateTab(educationBtn, skillsBtn, education, skills);
   });
 });
