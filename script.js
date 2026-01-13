@@ -1,6 +1,9 @@
 // ================= MOBILE MENU =================
 function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("hidden");
+  const menu = document.getElementById("mobileMenu");
+  if (menu) {
+    menu.classList.toggle("hidden");
+  }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -11,47 +14,57 @@ document.addEventListener("DOMContentLoaded", () => {
   const skills = document.getElementById("skills");
   const education = document.getElementById("education");
 
-  function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
-    showEl.classList.remove("hidden");
-    hideEl.classList.add("hidden");
+  if (skillsBtn && educationBtn && skills && education) {
 
-    activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
-    activeBtn.classList.add("after:scale-x-100", "text-red-600");
+    function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
+      // Toggle content
+      showEl.classList.remove("hidden");
+      hideEl.classList.add("hidden");
 
-    inactiveBtn.classList.remove("after:scale-x-100", "text-red-600");
-    inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
-  }
+      // Active tab
+      activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
+      activeBtn.classList.add("after:scale-x-100", "text-red-600");
 
-  // Default tab
-  setActive(skillsBtn, educationBtn, skills, education);
+      // Inactive tab
+      inactiveBtn.classList.remove("after:scale-x-100", "text-red-600");
+      inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
+    }
 
-  skillsBtn.addEventListener("click", () => {
+    // Default tab
     setActive(skillsBtn, educationBtn, skills, education);
-  });
 
-  educationBtn.addEventListener("click", () => {
-    setActive(educationBtn, skillsBtn, education, skills);
-  });
+    skillsBtn.addEventListener("click", () => {
+      setActive(skillsBtn, educationBtn, skills, education);
+    });
+
+    educationBtn.addEventListener("click", () => {
+      setActive(educationBtn, skillsBtn, education, skills);
+    });
+  }
 
   // ================= DARK MODE =================
   const html = document.documentElement;
   const themeIcon = document.getElementById("themeIcon");
 
-  // Load saved theme
-  if (localStorage.getItem("theme") === "dark") {
+  // Load saved theme on refresh
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
     html.classList.add("dark");
-    themeIcon.classList.replace("fa-moon", "fa-sun");
+    if (themeIcon) {
+      themeIcon.classList.replace("fa-moon", "fa-sun");
+    }
   }
 
+  // Make function global for onclick
   window.toggleDarkMode = function () {
     html.classList.toggle("dark");
 
-    if (html.classList.contains("dark")) {
-      localStorage.setItem("theme", "dark");
-      themeIcon.classList.replace("fa-moon", "fa-sun");
-    } else {
-      localStorage.setItem("theme", "light");
-      themeIcon.classList.replace("fa-sun", "fa-moon");
+    const isDark = html.classList.contains("dark");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+
+    if (themeIcon) {
+      themeIcon.classList.toggle("fa-moon", !isDark);
+      themeIcon.classList.toggle("fa-sun", isDark);
     }
   };
 
