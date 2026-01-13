@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Rakhul</title>
 
-  <script>
-  window.tailwind = {
-    config: {
-      darkMode: 'class'
-    }
-  }
-</script>
-
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -23,237 +15,132 @@
   <link rel="icon" type="image/jpg" href="logo.jpg">
 
 </head>
+<!-- Custom JS -->
+  <script src="script.js"></script>
 
-
-<body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-300">
+<body class="bg-black text-white font-sans">
 
 <!-- ================= NAVIGATION ================= -->
-<nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 border-b border-gray-200 dark:border-gray-800">
+<nav class="fixed top-0 left-0 w-full bg-black z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <!-- Logo -->
-    <h1 class="text-4xl md:text-5xl font-bold text-red-600">
-      Rakhul
-    </h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-red-600">Rakhul</h1>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex items-center space-x-6">
-     <a href="#header"
-   class="text-gray-900 dark:text-white
-          hover:text-red-500 dark:hover:text-red-400
-          font-medium transition">
-  Home
-</a>
-
-<a href="#about"
-   class="text-gray-900 dark:text-white
-          hover:text-red-500 dark:hover:text-red-400
-          font-medium transition">
-  About
-</a>
-
-<a href="#contact"
-   class="text-gray-900 dark:text-white
-          hover:text-red-500 dark:hover:text-red-400
-          font-medium transition">
-  Contact
-</a>
-
-        <!-- Dark Mode Toggle (Desktop) -->
-      <button onclick="toggleDarkMode()"
-  class="text-xl ml-2
-         text-gray-700 dark:text-gray-300
-         hover:text-red-500 dark:hover:text-red-400
-         transition">
-  <i id="themeIcon" class="fa-solid fa-moon"></i>
-</button>
-
+    <div class="hidden md:flex space-x-6">
+      <a href="#header" class="text-white hover:text-red-500 font-medium">Home</a>
+      <a href="#about" class="text-white hover:text-red-500 font-medium">About</a>
+      <a href="#contact" class="text-white hover:text-red-500 font-medium">Contact</a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button onclick="toggleMenu()"
-      class="md:hidden text-gray-900 dark:text-white text-3xl">
+    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
       ☰
     </button>
   </div>
 
   <!-- Mobile Menu -->
-<div id="mobileMenu"
-     class="hidden md:hidden bg-white dark:bg-black
-            border-t border-gray-200 dark:border-gray-800">
-
-  <a href="#header"
-     class="block px-6 py-4
-            text-gray-900 dark:text-white
-            hover:bg-gray-100 dark:hover:bg-gray-700
-            hover:text-red-500 dark:hover:text-red-400
-            transition-colors duration-200"
-     onclick="toggleMenu()">
-    Home
-  </a>
-
-  <a href="#about"
-     class="block px-6 py-4
-            text-gray-900 dark:text-white
-            hover:bg-gray-100 dark:hover:bg-gray-700
-            hover:text-red-500 dark:hover:text-red-400
-            transition-colors duration-200"
-     onclick="toggleMenu()">
-    About
-  </a>
-
-  <a href="#contact"
-     class="block px-6 py-4
-            text-gray-900 dark:text-white
-            hover:bg-gray-100 dark:hover:bg-gray-700
-            hover:text-red-500 dark:hover:text-red-400
-            transition-colors duration-200"
-     onclick="toggleMenu()">
-    Contact
-  </a>
-
-  <!-- Divider -->
-  <div class="h-px bg-gray-200 dark:bg-gray-800 mx-6"></div>
-
-  <!-- Dark Mode Toggle -->
-  <button onclick="toggleDarkMode()"
-    class="w-full flex items-center px-6 py-4
-           text-gray-700 dark:text-gray-300
-           hover:bg-gray-100 dark:hover:bg-gray-700
-           hover:text-red-500 dark:hover:text-red-400
-           transition-colors duration-200">
-    <i class="fa-solid fa-moon mr-3"></i>
-    Toggle Theme
-  </button>
-
-</div>
-
+  <div id="mobileMenu" class="hidden bg-black md:hidden">
+    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">About</a>
+    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Contact</a>
+  </div>
 </nav>
 
 <!-- ================= HERO ================= -->
 <section
   id="header"
-  class="min-h-screen pt-32 flex items-center px-6 scroll-mt-28
-         transition-colors duration-300">
+  class="min-h-screen pt-32 flex items-center bg-black px-6 scroll-mt-28">
 
   <div class="max-w-4xl w-full">
 
-    <h1 class="text-4xl md:text-6xl font-bold leading-tight
-               text-gray-900 dark:text-white">
+    <h1 class="text-4xl md:text-6xl font-bold leading-tight">
       Hi, I'm <span class="text-red-600">Rakhul Sankar</span>
     </h1>
 
-    <h2 class="text-2xl md:text-3xl mt-4 font-medium
-               text-gray-700 dark:text-gray-300">
+    <h2 class="text-2xl md:text-3xl mt-4 text-gray-300 font-medium">
       Frontend Developer & Programming Enthusiast
     </h2>
 
-    <p class="mt-6 text-lg md:text-xl max-w-2xl leading-relaxed
-              text-gray-600 dark:text-gray-300">
+    <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed">
       I build clean and responsive user interfaces while strengthening my
       programming skills in Python and Java. I enjoy problem-solving,
       writing clear logic, and continuously improving my development skills.
     </p>
 
     <div class="mt-10 flex flex-wrap gap-6">
-
       <a href="#projects"
-          class="border border-red-600 text-red-600
-                hover:bg-red-600 hover:text-white
-                px-8 py-4 rounded-lg font-semibold text-lg
-                transition-colors duration-200">
+         class="bg-red-600 hover:bg-red-700 px-8 py-4 rounded-lg font-semibold text-lg transition">
         View Projects
       </a>
 
       <a href="#contact"
-         class="border border-red-600 text-red-600
-                hover:bg-red-600 hover:text-white
-                px-8 py-4 rounded-lg font-semibold text-lg
-                transition-colors duration-200">
+         class="border border-red-600 text-red-600 hover:bg-red-600 hover:text-white
+                px-8 py-4 rounded-lg font-semibold text-lg transition">
         Contact Me
       </a>
-
     </div>
 
   </div>
 </section>
 
+
+
 <!-- ================= ABOUT ================= -->
-<section id="about" class="py-20 transition-colors duration-300">
+<section id="about" class="py-20">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex flex-col md:flex-row gap-10 items-center">
 
       <div class="w-full">
-
-        <!-- Section Title -->
-        <h2 class="text-5xl font-bold mb-6
-                   text-gray-900 dark:text-white">
-          About Me
-        </h2>
+        <h2 class="text-5xl font-bold mb-6">About Me</h2>
 
         <!-- Professional Summary -->
-        <p class="leading-relaxed mb-8 max-w-3xl
-                  text-gray-700 dark:text-gray-300">
-          I am a <span class="font-semibold text-gray-900 dark:text-white">
-          Frontend Developer</span> with strong programming fundamentals.
-          I focus on building responsive and user-friendly interfaces using
-          modern frontend technologies. I have a solid understanding of
-          problem-solving, logic building, and core programming concepts
-          through Python and Java.
+        <p class="text-gray-300 leading-relaxed mb-8 max-w-3xl">
+          I am a <span class="text-white font-semibold">Frontend Developer</span> with strong
+          programming fundamentals. I focus on building responsive and
+          user-friendly interfaces using modern frontend technologies.
+          I have a solid understanding of problem-solving, logic building,
+          and core programming concepts through Python and Java.
         </p>
 
         <!-- Resume Button -->
         <a href="Rakhul_Resume.pdf" download
-          class="inline-flex items-center gap-2
-                 bg-blue-600 text-white hover:bg-blue-700
-                 px-6 py-3 rounded-full font-semibold
-                 transition-colors duration-200 mb-10">
-          <i class="fa-solid fa-file-pdf"></i>
-          Download Resume
+          class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-full font-semibold transition mb-10">
+          <i class="fa-solid fa-file-pdf"></i> Download Resume
         </a>
 
         <!-- Tabs -->
         <div class="flex gap-10 mt-6 pb-2">
           <button
-  type="button"
-  id="skills-btn"
-  class="tab-btn relative text-lg font-medium pb-2
-         text-gray-900 dark:text-white
-         hover:text-red-500 dark:hover:text-red-400
-         after:content-[''] after:absolute after:left-0 after:bottom-0
-         after:h-[2px] after:w-full after:bg-red-500
-         after:scale-x-100 after:origin-left after:transition-transform">
-  Skills
-</button>
+            type="button"
+            id="skills-btn"
+            class="tab-btn relative text-lg font-medium text-white pb-2
+                   after:content-[''] after:absolute after:left-0 after:bottom-0
+                   after:h-[2px] after:w-full after:bg-red-500
+                   after:scale-x-100 after:origin-left after:transition-transform">
+            Skills
+          </button>
 
-<button
-  type="button"
-  id="education-btn"
-  class="tab-btn relative text-lg font-medium pb-2
-         text-gray-600 dark:text-gray-400
-         hover:text-red-500 dark:hover:text-red-400
-         after:content-[''] after:absolute after:left-0 after:bottom-0
-         after:h-[2px] after:w-full after:bg-red-500
-         after:scale-x-0 after:origin-left after:transition-transform">
-  Education
-</button>
-
+          <button
+            type="button"
+            id="education-btn"
+            class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+                   after:content-[''] after:absolute after:left-0 after:bottom-0
+                   after:h-[2px] after:w-full after:bg-red-500
+                   after:scale-x-0 after:origin-left after:transition-transform">
+            Education
+          </button>
         </div>
 
         <!-- TAB CONTENT -->
         <div class="mt-8">
 
           <!-- Skills -->
-          <div id="skills"
-               class="grid md:grid-cols-2 gap-8
-                      text-gray-700 dark:text-gray-300">
+          <div id="skills" class="grid md:grid-cols-2 gap-10 text-gray-300">
 
             <!-- Frontend -->
             <div>
-              <h3 class="font-semibold text-lg mb-3
-                         text-gray-900 dark:text-white">
-                Frontend Technologies
-              </h3>
+              <h3 class="text-white font-semibold text-lg mb-3">Frontend Technologies</h3>
               <ul class="space-y-2">
                 <li>HTML</li>
                 <li>Tailwind CSS</li>
@@ -264,13 +151,10 @@
 
             <!-- Programming -->
             <div>
-              <h3 class="font-semibold text-lg mb-3
-                         text-gray-900 dark:text-white">
-                Programming Languages
-              </h3>
-              <ul class="space-y-2">
-                <li>Python</li>
-                <li>Java</li>
+              <h3 class="text-white font-semibold text-lg mb-3">Programming Languages</h3>
+              <ul class="space-y-3">
+                <li>Python (Core Concepts)</li>
+                <li>Java (Core Concepts)</li>
                 <li>Problem Solving & Logic Building</li>
               </ul>
             </div>
@@ -278,28 +162,16 @@
           </div>
 
           <!-- Education -->
-          <div id="education"
-               class="hidden space-y-4
-                      text-gray-700 dark:text-gray-300">
-
+          <div id="education" class="hidden text-gray-300 space-y-4">
             <div>
-              <span class="font-semibold text-gray-900 dark:text-white">
-                Bachelor of Information Technology (IT)
-              </span><br>
-              <span class="text-sm text-gray-500 dark:text-gray-400">
-                2023
-              </span>
+              <span class="font-semibold text-white">Bachelor of Information Technology (IT)</span><br>
+              <span class="text-sm text-gray-400">2023</span>
             </div>
 
             <div>
-              <span class="font-semibold text-gray-900 dark:text-white">
-                Master of Computer Applications (MCA)
-              </span><br>
-              <span class="text-sm text-gray-500 dark:text-gray-400">
-                2026
-              </span>
+              <span class="font-semibold text-white">Master of Computer Applications (MCA)</span><br>
+              <span class="text-sm text-gray-400">2026</span>
             </div>
-
           </div>
 
         </div>
@@ -327,18 +199,13 @@
           </a>
         </div>
 
-        <p class="mt-6 text-gray-700 dark:text-gray-300">Phone: 9003261294</p>
-
+        <p class="mt-6 text-gray-300">Phone: 9003261294</p>
       </div>
 
       <!-- Contact Form -->
       <div class="md:w-2/3">
         <form action="https://api.web3forms.com/submit" method="POST"
-             class="w-full p-3
-       bg-white dark:bg-black
-       text-black dark:text-white
-       placeholder-gray-500 dark:placeholder-gray-400
-       rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+              class="bg-gray-900 p-6 rounded-lg space-y-4">
 
           <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
 
@@ -363,11 +230,10 @@
 </section>
 
 <!-- ================= FOOTER ================= -->
-<footer class="bg-gray-200 dark:bg-gray-800 text-center py-4">
+<footer class="bg-gray-700 text-center py-4">
   <p>© Copyright 2026 Rakhul</p>
 </footer>
 
-<!-- Custom JS -->
-  <script src="script.js"></script> 
+
 </body>
 </html>
