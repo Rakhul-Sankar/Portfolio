@@ -1,38 +1,44 @@
 // ================= MOBILE MENU =================
 function toggleMenu() {
-  const menu = document.getElementById("mobileMenu");
-  if (menu) menu.classList.toggle("hidden");
+  document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 
-// ================= THEME TOGGLE =================
-function toggleTheme() {
-  const html = document.documentElement;
-  const icon = document.getElementById("themeIcon");
-
-  html.classList.toggle("dark");
-
-  if (html.classList.contains("dark")) {
-    icon.classList.replace("fa-moon", "fa-sun");
-    localStorage.setItem("theme", "dark");
-  } else {
-    icon.classList.replace("fa-sun", "fa-moon");
-    localStorage.setItem("theme", "light");
-  }
-}
-
-// ================= LOAD SAVED THEME =================
+// ================= ABOUT TABS =================
 document.addEventListener("DOMContentLoaded", () => {
-  const savedTheme = localStorage.getItem("theme");
-  const icon = document.getElementById("themeIcon");
+  const skillsBtn = document.getElementById("skills-btn");
+  const educationBtn = document.getElementById("education-btn");
+  const skills = document.getElementById("skills");
+  const education = document.getElementById("education");
 
-  if (savedTheme === "dark") {
-    document.documentElement.classList.add("dark");
-    icon.classList.replace("fa-moon", "fa-sun");
+  function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
+    // Show / hide content
+    showEl.classList.remove("hidden");
+    hideEl.classList.add("hidden");
+
+    // Active tab underline (Tailwind after:)
+    activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
+    activeBtn.classList.add("after:scale-x-100", "text-white");
+
+    // Inactive tab
+    inactiveBtn.classList.remove("after:scale-x-100", "text-white");
+    inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
   }
+
+  // Default tab
+  setActive(skillsBtn, educationBtn, skills, education);
+
+  // Events
+  skillsBtn.addEventListener("click", () => {
+    setActive(skillsBtn, educationBtn, skills, education);
+  });
+
+  educationBtn.addEventListener("click", () => {
+    setActive(educationBtn, skillsBtn, education, skills);
+  });
 });
 
 const html = document.documentElement;
-const themeIcon = document.getElementById("themeIcon");
+  const themeIcon = document.getElementById("themeIcon");
 
   // Load saved theme
   if (localStorage.getItem("theme") === "dark") {
@@ -51,4 +57,3 @@ const themeIcon = document.getElementById("themeIcon");
       themeIcon.classList.replace("fa-sun", "fa-moon");
     }
   }
-
