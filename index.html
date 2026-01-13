@@ -29,7 +29,11 @@
 <body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
 <!-- ================= NAVIGATION ================= -->
-<nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 border-b border-gray-200 dark:border-gray-800">
+<nav class="fixed top-0 left-0 w-full
+           bg-white/90 dark:bg-gray-900/90
+           backdrop-blur
+           z-50 border-b border-gray-200 dark:border-gray-700">
+
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <!-- Logo -->
@@ -135,7 +139,10 @@
 <section
   id="header"
   class="min-h-screen pt-32 flex items-center px-6 scroll-mt-28
+         bg-gradient-to-br from-gray-50 via-white to-gray-100
+         dark:from-black dark:via-gray-900 dark:to-black
          transition-colors duration-300">
+
 
   <div class="max-w-4xl w-full">
 
