@@ -5,15 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Rakhul</title>
 
-   <script>
-  window.tailwind = {
-    config: {
-      darkMode: 'class'
-    }
-  }
-</script>
-
-
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -24,15 +15,13 @@
   <link rel="icon" type="image/jpg" href="logo.jpg">
 
 </head>
+<!-- Custom JS -->
+  <script src="script.js"></script>
 
-<body class="bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
+<body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
 <!-- ================= NAVIGATION ================= -->
-<nav class="fixed top-0 left-0 w-full
-           bg-white dark:bg-gray-900
-           z-50 border-b border-gray-200 dark:border-gray-700">
-
-
+<nav class="fixed top-0 left-0 w-full bg-white dark:bg-black z-50 border-b border-gray-200 dark:border-gray-800">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
     <!-- Logo -->
@@ -69,7 +58,7 @@
          text-gray-700 dark:text-gray-300
          hover:text-red-500 dark:hover:text-red-400
          transition">
-  <i class="theme-icon fa-solid fa-sun"></i>
+  <i id="themeIcon" class="fa-solid fa-moon"></i>
 </button>
 
     </div>
@@ -126,8 +115,8 @@
            hover:bg-gray-100 dark:hover:bg-gray-700
            hover:text-red-500 dark:hover:text-red-400
            transition-colors duration-200">
-    <i class="theme-icon fa-solid fa-sun"></i>
-    Dark Mode
+    <i class="fa-solid fa-moon mr-3"></i>
+    Toggle Theme
   </button>
 
 </div>
@@ -138,10 +127,7 @@
 <section
   id="header"
   class="min-h-screen pt-32 flex items-center px-6 scroll-mt-28
-         bg-gray-50 dark:bg-gray-950
          transition-colors duration-300">
-
-
 
   <div class="max-w-4xl w-full">
 
@@ -345,24 +331,14 @@
 
           <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
 
-         <input type="text" name="name" placeholder="Your Name" required
-  class="w-full p-3 bg-white dark:bg-black 
-         text-black dark:text-white
-         placeholder-gray-500 dark:placeholder-gray-400
-         focus:ring-2 focus:ring-red-600 outline-none rounded-md">
+          <input type="text" name="name" placeholder="Your Name" required
+                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
 
-         <input type="email" name="email" placeholder="Your Email" required
-  class="w-full p-3 bg-white dark:bg-black 
-         text-black dark:text-white
-         placeholder-gray-500 dark:placeholder-gray-400
-         focus:ring-2 focus:ring-red-600 outline-none rounded-md">
+          <input type="email" name="email" placeholder="Your Email" required
+                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
 
-         <textarea name="message" placeholder="Your Message" rows="5" required
-  class="w-full p-3 bg-white dark:bg-black 
-         text-black dark:text-white
-         placeholder-gray-500 dark:placeholder-gray-400
-         focus:ring-2 focus:ring-red-600 outline-none rounded-md"></textarea>
-
+          <textarea name="message" placeholder="Your Message" rows="5" required
+                    class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
 
           <button type="submit"
                   class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold transition">
@@ -380,6 +356,6 @@
   <p>© Copyright 2026 Rakhul</p>
 </footer>
 
-<script src="script.js"></script>
+
 </body>
 </html>
