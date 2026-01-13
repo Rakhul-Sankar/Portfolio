@@ -3,31 +3,28 @@ function toggleMenu() {
   document.getElementById("mobileMenu").classList.toggle("hidden");
 }
 
-// ================= ABOUT TABS =================
 document.addEventListener("DOMContentLoaded", () => {
+
+  // ================= ABOUT TABS =================
   const skillsBtn = document.getElementById("skills-btn");
   const educationBtn = document.getElementById("education-btn");
   const skills = document.getElementById("skills");
   const education = document.getElementById("education");
 
   function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
-    // Show / hide content
     showEl.classList.remove("hidden");
     hideEl.classList.add("hidden");
 
-    // Active tab underline (Tailwind after:)
     activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
-    activeBtn.classList.add("after:scale-x-100", "text-white");
+    activeBtn.classList.add("after:scale-x-100", "text-red-600");
 
-    // Inactive tab
-    inactiveBtn.classList.remove("after:scale-x-100", "text-white");
+    inactiveBtn.classList.remove("after:scale-x-100", "text-red-600");
     inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
   }
 
   // Default tab
   setActive(skillsBtn, educationBtn, skills, education);
 
-  // Events
   skillsBtn.addEventListener("click", () => {
     setActive(skillsBtn, educationBtn, skills, education);
   });
@@ -35,9 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
   educationBtn.addEventListener("click", () => {
     setActive(educationBtn, skillsBtn, education, skills);
   });
-});
 
-const html = document.documentElement;
+  // ================= DARK MODE =================
+  const html = document.documentElement;
   const themeIcon = document.getElementById("themeIcon");
 
   // Load saved theme
@@ -46,7 +43,7 @@ const html = document.documentElement;
     themeIcon.classList.replace("fa-moon", "fa-sun");
   }
 
-  function toggleDarkMode() {
+  window.toggleDarkMode = function () {
     html.classList.toggle("dark");
 
     if (html.classList.contains("dark")) {
@@ -56,8 +53,6 @@ const html = document.documentElement;
       localStorage.setItem("theme", "light");
       themeIcon.classList.replace("fa-sun", "fa-moon");
     }
-  }
+  };
 
-tailwind.config = {
-    darkMode: 'class'
-  }
+});
