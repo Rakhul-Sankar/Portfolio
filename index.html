@@ -5,6 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio | Rakhul</title>
 
+  <script>
+  window.tailwind = {
+    config: {
+      darkMode: 'class'
+    }
+  }
+</script>
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -15,8 +23,7 @@
   <link rel="icon" type="image/jpg" href="logo.jpg">
 
 </head>
-<!-- Custom JS -->
-  <script src="script.js"></script>
+
 
 <body class="bg-white text-black dark:bg-black dark:text-white font-sans transition-colors duration-300">
 
@@ -327,7 +334,11 @@
       <!-- Contact Form -->
       <div class="md:w-2/3">
         <form action="https://api.web3forms.com/submit" method="POST"
-             class="bg-gray-100 dark:bg-gray-900 p-6 rounded-lg space-y-4">
+             class="w-full p-3
+       bg-white dark:bg-black
+       text-black dark:text-white
+       placeholder-gray-500 dark:placeholder-gray-400
+       rounded-md focus:ring-2 focus:ring-red-600 outline-none">
 
           <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
 
@@ -356,6 +367,7 @@
   <p>© Copyright 2026 Rakhul</p>
 </footer>
 
-
+<!-- Custom JS -->
+  <script src="script.js"></script> 
 </body>
 </html>
