@@ -5,34 +5,36 @@ function toggleMenu() {
 
 // ================= ABOUT TABS =================
 document.addEventListener("DOMContentLoaded", () => {
-  const skillsBtn = document.getElementById("skills-btn");
+  const frontendBtn = document.getElementById("frontend-btn");
+  const languagesBtn = document.getElementById("languages-btn");
   const educationBtn = document.getElementById("education-btn");
-  const skills = document.getElementById("skills");
+
+  const frontend = document.getElementById("frontend");
+  const languages = document.getElementById("languages");
   const education = document.getElementById("education");
 
-  function setActive(activeBtn, inactiveBtn, showEl, hideEl) {
-    // Show / hide content
+  function setActive(activeBtn, showEl) {
+    // Hide all sections
+    [frontend, languages, education].forEach(el => el.classList.add("hidden"));
+    // Show selected section
     showEl.classList.remove("hidden");
-    hideEl.classList.add("hidden");
 
-    // Active tab
+    // Reset all buttons
+    [frontendBtn, languagesBtn, educationBtn].forEach(btn => {
+      btn.classList.remove("after:scale-x-100", "text-white");
+      btn.classList.add("after:scale-x-0", "text-gray-400");
+    });
+
+    // Activate selected button
     activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
     activeBtn.classList.add("after:scale-x-100", "text-white");
-
-    // Inactive tab
-    inactiveBtn.classList.remove("after:scale-x-100", "text-white");
-    inactiveBtn.classList.add("after:scale-x-0", "text-gray-400");
   }
 
   // Default tab
-  setActive(skillsBtn, educationBtn, skills, education);
+  setActive(frontendBtn, frontend);
 
   // Events
-  skillsBtn.addEventListener("click", () => {
-    setActive(skillsBtn, educationBtn, skills, education);
-  });
-
-  educationBtn.addEventListener("click", () => {
-    setActive(educationBtn, skillsBtn, education, skills);
-  });
+  frontendBtn.addEventListener("click", () => setActive(frontendBtn, frontend));
+  languagesBtn.addEventListener("click", () => setActive(languagesBtn, languages));
+  educationBtn.addEventListener("click", () => setActive(educationBtn, education));
 });

@@ -119,93 +119,82 @@
           <i class="fa-solid fa-file-pdf"></i> Download Resume
         </a>
 
-        <!-- Tabs -->
-        <div class="flex gap-10 mt-6 pb-2">
-          <button
-            type="button"
-            id="skills-btn"
-            class="tab-btn relative text-lg font-medium text-white pb-2
-                   after:content-[''] after:absolute after:left-0 after:bottom-0
-                   after:h-[2px] after:w-full after:bg-red-500
-                   after:scale-x-100 after:origin-left after:transition-transform">
-            Skills
-          </button>
+       <!-- Tabs -->
+<div class="flex gap-10 mt-6 pb-2">
+  <button
+    type="button"
+    id="frontend-btn"
+    class="tab-btn relative text-lg font-medium text-white pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-100 after:origin-left after:transition-transform">
+    Frontend
+  </button>
 
-          <button
-            type="button"
-            id="education-btn"
-            class="tab-btn relative text-lg font-medium text-gray-400 pb-2
-                   after:content-[''] after:absolute after:left-0 after:bottom-0
-                   after:h-[2px] after:w-full after:bg-red-500
-                   after:scale-x-0 after:origin-left after:transition-transform">
-            Education
-          </button>
-        </div>
+  <button
+    type="button"
+    id="languages-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Languages
+  </button>
 
-        <!-- TAB CONTENT -->
-        <div class="mt-8">
+  <button
+    type="button"
+    id="education-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Education
+  </button>
+</div>
 
-          <!-- Skills -->
-          <div id="skills" class="grid md:grid-cols-2 gap-10 text-gray-300">
+<!-- TAB CONTENT -->
+<div class="mt-8">
 
-            <!-- Frontend -->
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Frontend Technologies</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>HTML5 & Semantic Markup</li>
-                <li>Tailwind CSS & Responsive Design</li>
-                <li>JavaScript (ES6+)</li>
-                <li>Basic React (Learning)</li>
-              </ul>
-            </div>
+  <!-- Frontend -->
+  <div id="frontend" class="grid md:grid-cols-2 gap-10 text-gray-300">
+    <div>
+      <h3 class="text-white font-semibold text-lg mb-3">Frontend Technologies</h3>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>HTML5 & Semantic Markup</li>
+        <li>Tailwind CSS & Responsive Design</li>
+        <li>JavaScript (ES6+)</li>
+        <li>Basic React (Learning)</li>
+      </ul>
+    </div>
+  </div>
 
-            <!-- Programming -->
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Programming & Problem Solving</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>Java (OOP, Advanced Concepts)</li>
-                <li>Python (Scripting & Logic Building)</li>
-                <li>Data Structures & Algorithms</li>
-                <li>Problem Solving & Clean Code Practices</li>
-              </ul>
-            </div>
+  <!-- Languages -->
+  <div id="languages" class="hidden grid md:grid-cols-2 gap-10 text-gray-300">
+    <div>
+      <h3 class="text-white font-semibold text-lg mb-3">Languages & Problem Solving</h3>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>Java (OOP, Advanced Concepts)</li>
+        <li>Python (Scripting & Logic Building)</li>
+        <li>Data Structures & Algorithms</li>
+        <li>Problem Solving & Clean Code Practices</li>
+      </ul>
+    </div>
+  </div>
 
-            <!-- Tools -->
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Tools & Platforms</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>Git & GitHub</li>
-                <li>VS Code</li>
-                <li>Figma (UI/UX Collaboration)</li>
-                <li>Basic Linux Commands</li>
-              </ul>
-            </div>
+  <!-- Education -->
+  <div id="education" class="hidden text-gray-300 space-y-6">
+    <div>
+      <span class="font-semibold text-white">Bachelor of Information Technology (IT)</span><br>
+      <span class="text-sm text-gray-400">Graduated: 2023</span>
+    </div>
 
-            <!-- Soft Skills -->
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Soft Skills</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>Team Collaboration</li>
-                <li>Adaptability & Continuous Learning</li>
-                <li>Communication & Presentation</li>
-                <li>Time Management</li>
-              </ul>
-            </div>
+    <div>
+      <span class="font-semibold text-white">Master of Computer Applications (MCA)</span><br>
+      <span class="text-sm text-gray-400">Expected: 2026</span>
+    </div>
+  </div>
+</div>
 
-          </div>
-
-          <!-- Education -->
-          <div id="education" class="hidden text-gray-300 space-y-6">
-            <div>
-              <span class="font-semibold text-white">Bachelor of Information Technology (IT)</span><br>
-              <span class="text-sm text-gray-400">Graduated: 2023</span>
-            </div>
-
-            <div>
-              <span class="font-semibold text-white">Master of Computer Applications (MCA)</span><br>
-              <span class="text-sm text-gray-400">Expected: 2026</span>
-            </div>
-          </div>
 
         </div>
 
