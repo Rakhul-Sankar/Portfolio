@@ -38,3 +38,4 @@ document.addEventListener("DOMContentLoaded", () => {
   languagesBtn.addEventListener("click", () => setActive(languagesBtn, languages));
   educationBtn.addEventListener("click", () => setActive(educationBtn, education));
 });
+document.getElementById("year").textContent = new Date().getFullYear();
