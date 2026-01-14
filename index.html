@@ -218,28 +218,49 @@
         <p class="mt-6 text-gray-300">Phone: 9003261294</p>
       </div>
 
-      <!-- Contact Form -->
-      <div class="md:w-2/3">
-        <form action="https://api.web3forms.com/submit" method="POST"
-              class="bg-gray-900 p-6 rounded-lg space-y-4">
+    <!-- ================= CONTACT FORM ================= -->
+<div class="md:w-2/3">
+  <form action="https://api.web3forms.com/submit" method="POST"
+        class="bg-gray-900 p-8 rounded-lg shadow-lg space-y-6">
 
-          <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
 
-          <input type="text" name="name" placeholder="Your Name" required
-                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-gray-400 mb-2 font-medium">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <input type="email" name="email" placeholder="Your Email" required
-                 class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-gray-400 mb-2 font-medium">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <textarea name="message" placeholder="Your Message" rows="5" required
-                    class="w-full p-3 bg-black rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+    <!-- Subject -->
+    <div>
+      <label for="subject" class="block text-gray-400 mb-2 font-medium">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Message subject" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <button type="submit"
-                  class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold transition">
-            Submit
-          </button>
-        </form>
-      </div>
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-gray-400 mb-2 font-medium">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required
+                class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit"
+            class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold text-white transition duration-300">
+      Send Message
+    </button>
+  </form>
+</div>
 
     </div>
   </div>
