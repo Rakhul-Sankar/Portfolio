@@ -19,31 +19,29 @@
 <body class="bg-black text-white font-sans">
 
 <!-- ================= NAVIGATION ================= -->
-<nav id="navbar"
-     class="fixed top-0 left-0 w-full bg-black z-50 shadow-md transition-transform duration-500">
+<nav class="fixed top-0 left-0 w-full bg-black z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <!-- Logo -->
-    <h1 class="text-4xl md:text-5xl font-extrabold text-red-600 tracking-tight">Rakhul</h1>
+    <h1 class="text-4xl md:text-5xl font-bold text-red-600">Rakhul</h1>
 
     <!-- Desktop Menu -->
     <div class="hidden md:flex space-x-6">
-      <a href="#header" class="text-white hover:text-red-500 font-medium transition">Home</a>
-      <a href="#about" class="text-white hover:text-red-500 font-medium transition">About</a>
-      <a href="#contact" class="text-white hover:text-red-500 font-medium transition">Contact</a>
+      <a href="#header" class="text-white hover:text-red-500 font-medium">Home</a>
+      <a href="#about" class="text-white hover:text-red-500 font-medium">About</a>
+      <a href="#contact" class="text-white hover:text-red-500 font-medium">Contact</a>
     </div>
 
     <!-- Mobile Menu Button -->
-    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl focus:outline-none">
+    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
       ☰
     </button>
   </div>
 
   <!-- Mobile Menu -->
   <div id="mobileMenu" class="hidden bg-black md:hidden">
-    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800 transition" onclick="toggleMenu()">Home</a>
-    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800 transition" onclick="toggleMenu()">About</a>
-    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800 transition" onclick="toggleMenu()">Contact</a>
+    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">About</a>
+    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Contact</a>
   </div>
 </nav>
 
@@ -52,7 +50,7 @@
   id="header"
   class="min-h-screen flex items-center bg-black px-6 md:px-12 scroll-mt-28 relative overflow-hidden">
 
-  <div class="max-w-5xl w-full text-center md:text-left opacity-0 translate-y-10 transition-all duration-700 will-change-transform">
+  <div class="max-w-5xl w-full text-center md:text-left animate-fadeIn">
     
     <!-- Heading -->
     <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-white">
@@ -65,14 +63,14 @@
     </h2>
 
     <!-- About Me -->
-    <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed mx-auto md:mx-0">
+    <p class="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl leading-relaxed">
       Passionate about crafting clean, responsive, and user-friendly web experiences. 
       I combine strong programming fundamentals with modern frontend technologies 
       to deliver solutions that are both functional and visually appealing.
     </p>
 
     <!-- Highlights -->
-    <ul class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed space-y-3 list-disc list-inside mx-auto md:mx-0">
+    <ul class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl leading-relaxed space-y-3 list-disc list-inside">
       <li>Frontend expertise in HTML, Tailwind CSS, and JavaScript</li>
       <li>Strong programming foundation in Java and Python</li>
       <li>Enjoy solving problems and writing clean, efficient logic</li>
@@ -81,7 +79,7 @@
     </ul>
 
     <!-- Buttons -->
-    <div class="mt-10 flex flex-wrap justify-center md:justify-start gap-6">
+    <div class="mt-10 flex flex-wrap gap-6">
       <a href="#projects"
          class="border border-red-600 text-red-600 hover:bg-red-600 hover:text-white
                 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
@@ -100,186 +98,175 @@
 
 
 <!-- ================= ABOUT ================= -->
-<section id="about" class="py-20 bg-black scroll-mt-28">
+<section id="about" class="py-20 bg-black">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row gap-10 items-start">
+    <div class="flex flex-col md:flex-row gap-10 items-center">
 
-      <!-- Left Column -->
       <div class="w-full">
-        <!-- Heading -->
-        <h2 class="text-5xl font-extrabold mb-6 text-white">About Me</h2>
+        <h2 class="text-5xl font-bold mb-6 text-white">About Me</h2>
 
         <!-- Professional Summary -->
         <p class="text-gray-300 leading-relaxed mb-8 max-w-3xl">
-          I am a <span class="text-white font-semibold">Frontend Developer</span> passionate about building responsive, user-friendly web interfaces with modern technologies such as 
+          I am a Frontend Developer passionate about building responsive, user-friendly web interfaces with modern technologies such as 
           <span class="text-white font-semibold">HTML, Tailwind CSS, and JavaScript</span>. With a strong foundation in programming through 
           <span class="text-white font-semibold">Java and Python</span>, I enjoy solving problems, writing clean logic, and transforming ideas into functional digital experiences. 
           My focus is on creating solutions that are visually appealing, accessible, and performance-driven. 
-          Currently, I am advancing my expertise in <span class="text-white font-semibold">Advanced Java</span> and deepening my knowledge of <span class="text-white font-semibold">Python</span>, 
+          Currently, I am advancing my expertise in <span class="text-white font-semibold">Advanced Java</span> and planning to deepen my knowledge of <span class="text-white font-semibold">Python</span>, 
           with the goal of becoming a versatile developer ready to tackle real-world challenges.
         </p>
 
         <!-- Resume Button -->
         <a href="Rakhul_Resume.pdf" download
-          class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full font-semibold transition duration-300 mb-10 text-white shadow-lg">
+          class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 px-6 py-3 rounded-full font-semibold transition mb-10 text-white">
           <i class="fa-solid fa-file-pdf"></i> Download Resume
         </a>
 
-        <!-- Tabs -->
-        <div id="about-tabs" class="flex gap-10 mt-6 pb-2 transition-opacity duration-500">
-          <button
-            type="button"
-            id="frontend-btn"
-            class="tab-btn relative text-lg font-medium text-white pb-2
-                   after:content-[''] after:absolute after:left-0 after:bottom-0
-                   after:h-[2px] after:w-full after:bg-red-600
-                   after:scale-x-100 after:origin-left after:transition-transform">
-            Frontend
-          </button>
+       <!-- Tabs -->
+<div class="flex gap-10 mt-6 pb-2">
+  <button
+    type="button"
+    id="frontend-btn"
+    class="tab-btn relative text-lg font-medium text-white pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-100 after:origin-left after:transition-transform">
+    Frontend
+  </button>
 
-          <button
-            type="button"
-            id="languages-btn"
-            class="tab-btn relative text-lg font-medium text-gray-400 pb-2
-                   after:content-[''] after:absolute after:left-0 after:bottom-0
-                   after:h-[2px] after:w-full after:bg-red-600
-                   after:scale-x-0 after:origin-left after:transition-transform">
-            Languages
-          </button>
+  <button
+    type="button"
+    id="languages-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Languages
+  </button>
 
-          <button
-            type="button"
-            id="education-btn"
-            class="tab-btn relative text-lg font-medium text-gray-400 pb-2
-                   after:content-[''] after:absolute after:left-0 after:bottom-0
-                   after:h-[2px] after:w-full after:bg-red-600
-                   after:scale-x-0 after:origin-left after:transition-transform">
-            Education
-          </button>
-        </div>
+  <button
+    type="button"
+    id="education-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Education
+  </button>
+</div>
 
-        <!-- TAB CONTENT -->
-        <div class="mt-8">
-          <!-- Frontend -->
-          <div id="frontend" class="grid md:grid-cols-2 gap-10 text-gray-300">
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Frontend Technologies</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>HTML</li>
-                <li>Tailwind CSS</li>
-                <li>JavaScript</li>
-              </ul>
-            </div>
-          </div>
+<!-- TAB CONTENT -->
+<div class="mt-8">
 
-          <!-- Languages -->
-          <div id="languages" class="hidden grid md:grid-cols-2 gap-10 text-gray-300">
-            <div>
-              <h3 class="text-white font-semibold text-lg mb-3">Programming Languages</h3>
-              <ul class="space-y-2 list-disc list-inside">
-                <li>Java</li>
-                <li>Python</li>
-                <li>Django</li>
-              </ul>
-            </div>
-          </div>
+  <!-- Frontend -->
+  <div id="frontend" class="grid md:grid-cols-2 gap-10 text-gray-300">
+    <div>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>HTML </li>
+        <li>Tailwind CSS </li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </div>
 
-          <!-- Education -->
-          <div id="education" class="hidden text-gray-300 space-y-6">
-            <div>
-              <span class="font-semibold text-white">Bachelor of Information Technology (IT)</span><br>
-              <span class="text-sm text-gray-400">XYZ University — Graduated: 2023</span>
-            </div>
+  <!-- Languages -->
+  <div id="languages" class="hidden grid md:grid-cols-2 gap-10 text-gray-300">
+    <div>
+      <ul class="space-y-2 list-disc list-inside">
+        <li>Java </li>
+        <li>Python </li>
+        <li>Django</li>
+      </ul>
+    </div>
+  </div>
 
-            <div>
-              <span class="font-semibold text-white">Master of Computer Applications (MCA)</span><br>
-              <span class="text-sm text-gray-400">ABC Institute — Expected: 2026</span>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- Education -->
+  <div id="education" class="hidden text-gray-300 space-y-6">
+    <div>
+      <span class="font-semibold text-white">Bachelor of Information Technology (IT)</span><br>
+      <span class="text-sm text-gray-400">Graduated: 2023</span>
+    </div>
+
+    <div>
+      <span class="font-semibold text-white">Master of Computer Applications (MCA)</span><br>
+      <span class="text-sm text-gray-400">Expected: 2026</span>
+    </div>
+  </div>
+</div>
+ </div>
+  </div>
     </div>
   </div>
 </section>
+
 
 
 <!-- ================= CONTACT ================= -->
-<section id="contact" class="py-20 bg-black scroll-mt-28">
+<section id="contact" class="py-20">
   <div class="max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row gap-12">
+    <div class="flex flex-col md:flex-row gap-10">
 
-      <!-- Contact Info -->
       <div class="md:w-1/3">
-        <h2 class="text-4xl font-extrabold mb-6 text-white">Get in Touch</h2>
-        <p class="text-gray-400 leading-relaxed">
-          Whether you have a project idea, collaboration request, or just want to say hello — feel free to reach out!
-        </p>
+        <h2 class="text-4xl font-bold mb-4">Contact Me</h2>
 
-        <!-- Social Icons -->
-        <div class="flex gap-6 text-3xl mt-8 text-red-600">
-          <a href="mailto:rakhulsankar@gmail.com" class="hover:text-white transition">
+        <div class="flex gap-6 text-4xl mt-6">
+          <a href="mailto:rakhulsankar@gmail.com" class="hover:text-gray-400">
             <i class="fa-solid fa-envelope"></i>
           </a>
-          <a href="https://github.com/Rakhul-Sankar" target="_blank" class="hover:text-white transition">
+          <a href="https://github.com/Rakhul-Sankar" target="_blank" class="hover:text-gray-400">
             <i class="fab fa-github"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" class="hover:text-white transition">
-            <i class="fab fa-linkedin"></i>
           </a>
         </div>
 
-        <!-- Phone -->
-        <p class="mt-6 text-gray-300 font-medium">📞 +91 90032 61294</p>
+        <p class="mt-6 text-gray-300">Phone: 9003261294</p>
       </div>
 
-      <!-- Contact Form -->
-      <div class="md:w-2/3">
-        <form action="https://api.web3forms.com/submit" method="POST"
-              class="bg-gray-900 p-8 rounded-lg shadow-lg space-y-6">
+    <!-- ================= CONTACT FORM ================= -->
+<div class="md:w-2/3">
+  <form action="https://api.web3forms.com/submit" method="POST"
+        class="bg-gray-900 p-8 rounded-lg shadow-lg space-y-6">
 
-          <!-- Web3Forms Access Key -->
-          <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
+    <!-- Web3Forms Access Key -->
+    <input type="hidden" name="access_key" value="41b62bef-10fe-4818-a56b-33972b055d42">
 
-          <!-- Name -->
-          <div>
-            <label for="name" class="block text-gray-400 mb-2 font-medium">Full Name</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required
-                   class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
-          </div>
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-gray-400 mb-2 font-medium">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <!-- Email -->
-          <div>
-            <label for="email" class="block text-gray-400 mb-2 font-medium">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required
-                   class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
-          </div>
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-gray-400 mb-2 font-medium">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <!-- Subject -->
-          <div>
-            <label for="subject" class="block text-gray-400 mb-2 font-medium">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Message subject" required
-                   class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
-          </div>
+    <!-- Subject -->
+    <div>
+      <label for="subject" class="block text-gray-400 mb-2 font-medium">Subject</label>
+      <input type="text" id="subject" name="subject" placeholder="Message subject" required
+             class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none">
+    </div>
 
-          <!-- Message -->
-          <div>
-            <label for="message" class="block text-gray-400 mb-2 font-medium">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required
-                      class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
-          </div>
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-gray-400 mb-2 font-medium">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." rows="6" required
+                class="w-full p-3 bg-black text-gray-200 rounded-md focus:ring-2 focus:ring-red-600 outline-none"></textarea>
+    </div>
 
-          <!-- Submit Button -->
-          <button type="submit"
-                  class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold text-white transition duration-300 shadow-md">
-            Send Message
-          </button>
-        </form>
-      </div>
+    <!-- Submit Button -->
+    <button type="submit"
+            class="w-full bg-red-600 hover:bg-red-700 py-3 rounded-md font-semibold text-white transition duration-300">
+      Send Message
+    </button>
+  </form>
+</div>
 
     </div>
   </div>
 </section>
-
 
 <!-- ================= FOOTER ================= --> 
  <footer class="bg-gray-800 text-center py-6 text-gray-300"> 
