@@ -19,33 +19,58 @@
 <body class="bg-black text-white font-sans">
 
 <!-- ================= NAVIGATION ================= -->
-<nav class="fixed top-0 left-0 w-full bg-black z-50">
+<nav class="fixed top-0 left-0 w-full bg-black/80 backdrop-blur-md border-b border-gray-800 z-50">
   <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
 
-    <h1 class="text-4xl md:text-5xl font-bold text-red-600">Rakhul</h1>
+    <!-- Logo -->
+    <h1 class="text-3xl md:text-4xl font-bold text-red-600 tracking-wide">
+      Rakhul
+    </h1>
 
     <!-- Desktop Menu -->
-    <div class="hidden md:flex space-x-6">
-      <a href="#header" class="text-white hover:text-red-500 font-medium">Home</a>
-      <a href="#about" class="text-white hover:text-red-500 font-medium">About</a>
-      <a href="#skills" class="text-white hover:text-red-500 font-medium">Skills</a>
-      <a href="#contact" class="text-white hover:text-red-500 font-medium">Contact</a>
+    <div class="hidden md:flex space-x-8 text-sm font-medium">
+
+      <a href="#header"
+         class="relative group text-gray-300 hover:text-white transition">
+        Home
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="#about"
+         class="relative group text-gray-300 hover:text-white transition">
+        About
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="#skills"
+         class="relative group text-gray-300 hover:text-white transition">
+        Skills
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all group-hover:w-full"></span>
+      </a>
+
+      <a href="#contact"
+         class="relative group text-gray-300 hover:text-white transition">
+        Contact
+        <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-red-600 transition-all group-hover:w-full"></span>
+      </a>
+
     </div>
 
     <!-- Mobile Menu Button -->
-    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl">
+    <button onclick="toggleMenu()" class="md:hidden text-white text-3xl hover:text-red-500 transition">
       ☰
     </button>
   </div>
 
   <!-- Mobile Menu -->
-  <div id="mobileMenu" class="hidden bg-black md:hidden">
-    <a href="#header" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Home</a>
-    <a href="#about" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">About</a>
-    <a href="#skills" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Skills</a>
-    <a href="#contact" class="block px-6 py-4 text-white hover:bg-gray-800" onclick="toggleMenu()">Contact</a>
+  <div id="mobileMenu" class="hidden bg-black/95 backdrop-blur-md border-t border-gray-800 md:hidden">
+    <a href="#header" class="block px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-900" onclick="toggleMenu()">Home</a>
+    <a href="#about" class="block px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-900" onclick="toggleMenu()">About</a>
+    <a href="#skills" class="block px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-900" onclick="toggleMenu()">Skills</a>
+    <a href="#contact" class="block px-6 py-4 text-gray-300 hover:text-white hover:bg-gray-900" onclick="toggleMenu()">Contact</a>
   </div>
 </nav>
+
 
 <!-- ================= HERO ================= -->
 <section
