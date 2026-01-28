@@ -165,122 +165,197 @@
       </div>
     </div>
 
-    <!-- SKILLS TABS -->
-    <div class="mt-24">
 
-      <!-- TAB BUTTONS -->
-      <div class="flex gap-10 border-b border-gray-800 pb-3">
-        <button id="frontend-btn" class="tab-btn text-white font-medium border-b-2 border-red-600 pb-2">Frontend</button>
-        <button id="languages-btn" class="tab-btn text-gray-400 font-medium pb-2">Languages</button>
-        <button id="education-btn" class="tab-btn text-gray-400 font-medium pb-2">Education</button>
-      </div>
 
-      <!-- TAB CONTENT -->
-      <div class="mt-10">
+        <!-- Resume Download Button -->
+       <a href="Rakhul_Resume.pdf" download
+  class="inline-flex items-center gap-2
+         bg-red-600 hover:bg-red-700
+         px-6 py-3 rounded-full font-semibold text-white
+         transition-all duration-200 mb-2">
+  <i class="fa-solid fa-file-pdf"></i>
+  Download Resume
+</a>
 
-        <!-- FRONTEND -->
-        <div id="frontend" class="grid md:grid-cols-2 gap-8 text-gray-300">
+       <!-- Tabs -->
+<div class="flex gap-10 mt-6 pb-2">
+  <button
+    type="button"
+    id="frontend-btn"
+    class="tab-btn relative text-lg font-medium text-white pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-100 after:origin-left after:transition-transform">
+    Frontend
+  </button>
 
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">HTML</span><span>90%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[90%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Semantic structure, forms, accessibility basics</p>
-          </div>
+  <button
+    type="button"
+    id="languages-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Languages
+  </button>
 
-          <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Tailwind CSS</span><span>85%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[85%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Responsive layouts and utility-first styling</p>
-          </div>
+  <button
+    type="button"
+    id="education-btn"
+    class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+           after:content-[''] after:absolute after:left-0 after:bottom-0
+           after:h-[2px] after:w-full after:bg-red-500
+           after:scale-x-0 after:origin-left after:transition-transform">
+    Education
+  </button>
+</div>
 
-          <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">JavaScript</span><span>75%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">DOM manipulation and interactivity</p>
-          </div>
+<!-- TAB CONTENT -->
+<div class="mt-8">
 
-        </div>
+  <!-- Frontend -->
+<div id="frontend" class="grid md:grid-cols-2 gap-8 text-gray-300">
 
-        <!-- LANGUAGES -->
-        <div id="languages" class="hidden grid md:grid-cols-2 gap-8 text-gray-300">
+  <!-- HTML -->
+  <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">HTML</span>
+      <span>90%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[90%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      Semantic structure, forms, accessibility basics
+    </p>
+  </div>
 
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Java</span><span>80%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[80%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">OOP, collections, problem solving</p>
-          </div>
+  <!-- Tailwind CSS -->
+  <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">Tailwind CSS</span>
+      <span>85%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[85%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      Responsive layouts, utility-first styling, components
+    </p>
+  </div>
 
-          <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Python</span><span>75%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Core programming and backend basics</p>
-          </div>
+  <!-- JavaScript -->
+  <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">JavaScript</span>
+      <span>75%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      DOM manipulation, events, basic logic & interactivity
+    </p>
+  </div>
 
-          <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Django</span><span>70%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[70%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">MVC architecture, auth, forms</p>
-          </div>
+</div>
 
-        </div>
 
-        <!-- EDUCATION -->
-        <div id="education" class="hidden space-y-8 text-gray-300">
+ <!-- Languages -->
+<div id="languages" class="hidden grid md:grid-cols-2 gap-8 text-gray-300">
 
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between flex-wrap gap-2">
-              <h3 class="text-white font-semibold text-lg">B.Sc Information Technology</h3>
-              <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2020 – 2023</span>
-            </div>
-            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
-              <li>Data Structures, DBMS, Web Technologies</li>
-              <li>Strong programming foundation</li>
-            </ul>
-          </div>
+  <!-- Java -->
+  <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">Java</span>
+      <span>80%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[80%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      OOP concepts, collections, problem solving, basic JDBC
+    </p>
+  </div>
 
-          <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between flex-wrap gap-2">
-              <h3 class="text-white font-semibold text-lg">Master of Computer Applications</h3>
-              <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2024 – 2026</span>
-            </div>
-            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
-              <li>Advanced software development</li>
-              <li>Focus on Java, Python, backend systems</li>
-            </ul>
-          </div>
+  <!-- Python -->
+  <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">Python</span>
+      <span>75%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      Core programming, logic building, scripting, basics of backend
+    </p>
+  </div>
 
-        </div>
+  <!-- Django -->
+  <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">Django</span>
+      <span>70%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[70%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      MVC architecture, authentication, forms, REST basics
+    </p>
+  </div>
 
-      </div>
+</div>
+
+
+  <!-- Education -->
+<div id="education" class="hidden space-y-8 text-gray-300">
+
+  <!-- BSc IT -->
+  <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between items-center flex-wrap gap-2">
+      <h3 class="text-white font-semibold text-lg">
+        Bachelor of Information Technology (B.Sc IT)
+      </h3>
+      <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">
+        2020 – 2023
+      </span>
     </div>
 
+    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
+      <li>Built strong foundation in programming and problem solving</li>
+      <li>Studied Data Structures, DBMS, Web Technologies</li>
+      <li>Completed academic mini-projects in web development</li>
+    </ul>
+  </div>
+
+  <!-- MCA -->
+  <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between items-center flex-wrap gap-2">
+      <h3 class="text-white font-semibold text-lg">
+        Master of Computer Applications (MCA)
+      </h3>
+      <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">
+        2024 – 2026 (Pursuing)
+      </span>
+    </div>
+
+    <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
+      <li>Advanced study in software development and system design</li>
+      <li>Focusing on Java, Python, and backend technologies</li>
+      <li>Improving Data Structures and real-world project skills</li>
+    </ul>
+  </div>
+
+</div>
+
+</div>
+ </div>
+  </div>
+    </div>
   </div>
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="py-20">
