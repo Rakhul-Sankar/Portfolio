@@ -197,15 +197,52 @@
 <div class="mt-8">
 
   <!-- Frontend -->
-  <div id="frontend" class="grid md:grid-cols-2 gap-10 text-gray-300">
-    <div>
-      <ul class="space-y-2 list-disc list-inside">
-        <li>HTML </li>
-        <li>Tailwind CSS </li>
-        <li>JavaScript</li>
-      </ul>
+<div id="frontend" class="grid md:grid-cols-2 gap-8 text-gray-300">
+
+  <!-- HTML -->
+  <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">HTML</span>
+      <span>90%</span>
     </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[90%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      Semantic structure, forms, accessibility basics
+    </p>
   </div>
+
+  <!-- Tailwind CSS -->
+  <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">Tailwind CSS</span>
+      <span>85%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[85%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      Responsive layouts, utility-first styling, components
+    </p>
+  </div>
+
+  <!-- JavaScript -->
+  <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between mb-2">
+      <span class="font-semibold text-white">JavaScript</span>
+      <span>75%</span>
+    </div>
+    <div class="w-full bg-gray-700 h-2 rounded-full">
+      <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
+    </div>
+    <p class="text-sm mt-3 text-gray-400">
+      DOM manipulation, events, basic logic & interactivity
+    </p>
+  </div>
+
+</div>
+
 
   <!-- Languages -->
   <div id="languages" class="hidden grid md:grid-cols-2 gap-10 text-gray-300">
@@ -291,6 +328,48 @@
   <p class="text-sm">&copy; <span id="year"></span> Rakhul. All rights reserved.</p>
  </footer>
 
-<script src="script.js"></script>
+<script>
+  // ================= MOBILE MENU =================
+function toggleMenu() {
+  document.getElementById("mobileMenu").classList.toggle("hidden");
+}
+
+// ================= ABOUT TABS =================
+document.addEventListener("DOMContentLoaded", () => {
+  const frontendBtn = document.getElementById("frontend-btn");
+  const languagesBtn = document.getElementById("languages-btn");
+  const educationBtn = document.getElementById("education-btn");
+
+  const frontend = document.getElementById("frontend");
+  const languages = document.getElementById("languages");
+  const education = document.getElementById("education");
+
+  function setActive(activeBtn, showEl) {
+    // Hide all sections
+    [frontend, languages, education].forEach(el => el.classList.add("hidden"));
+    // Show selected section
+    showEl.classList.remove("hidden");
+
+    // Reset all buttons
+    [frontendBtn, languagesBtn, educationBtn].forEach(btn => {
+      btn.classList.remove("after:scale-x-100", "text-white");
+      btn.classList.add("after:scale-x-0", "text-gray-400");
+    });
+
+    // Activate selected button
+    activeBtn.classList.remove("after:scale-x-0", "text-gray-400");
+    activeBtn.classList.add("after:scale-x-100", "text-white");
+  }
+
+  // Default tab
+  setActive(frontendBtn, frontend);
+
+  // Events
+  frontendBtn.addEventListener("click", () => setActive(frontendBtn, frontend));
+  languagesBtn.addEventListener("click", () => setActive(languagesBtn, languages));
+  educationBtn.addEventListener("click", () => setActive(educationBtn, education));
+});
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
