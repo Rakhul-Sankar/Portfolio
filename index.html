@@ -218,150 +218,133 @@ to grow into a full-stack developer.
       <p class="text-gray-400 mt-4">Technologies and knowledge areas I work with</p>
     </div>
 
-      <!-- Tabs -->
-      <div class="flex gap-10 pb-2 justify-center">
-        <button
-          type="button"
-          id="frontend-btn"
-          class="tab-btn relative text-lg font-medium text-white pb-2
-                 after:content-[''] after:absolute after:left-0 after:bottom-0
-                 after:h-[2px] after:w-full after:bg-red-500
-                 after:scale-x-100 after:origin-left after:transition-transform">
-          Frontend
-        </button>
+    <!-- Tabs -->
+    <div class="flex gap-10 pb-2 justify-center border-b border-gray-800">
+      <button id="frontend-btn"
+        class="tab-btn relative text-lg font-medium text-white pb-2
+               after:content-[''] after:absolute after:left-0 after:bottom-0
+               after:h-[2px] after:w-full after:bg-red-500 after:scale-x-100 after:origin-left after:transition-transform">
+        Frontend
+      </button>
 
-        <button
-          type="button"
-          id="languages-btn"
-          class="tab-btn relative text-lg font-medium text-gray-400 pb-2
-                 after:content-[''] after:absolute after:left-0 after:bottom-0
-                 after:h-[2px] after:w-full after:bg-red-500
-                 after:scale-x-0 after:origin-left after:transition-transform">
-          Languages
-        </button>
+      <button id="languages-btn"
+        class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+               after:content-[''] after:absolute after:left-0 after:bottom-0
+               after:h-[2px] after:w-full after:bg-red-500 after:scale-x-0 after:origin-left after:transition-transform">
+        Languages
+      </button>
 
-        <button
-          type="button"
-          id="education-btn"
-          class="tab-btn relative text-lg font-medium text-gray-400 pb-2
-                 after:content-[''] after:absolute after:left-0 after:bottom-0
-                 after:h-[2px] after:w-full after:bg-red-500
-                 after:scale-x-0 after:origin-left after:transition-transform">
-          Education
-        </button>
-      </div>
-
-      <!-- TAB CONTENT -->
-      <div class="mt-10">
-
-        <!-- FRONTEND -->
-        <div id="frontend" class="grid md:grid-cols-2 gap-8 text-gray-300">
-
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">HTML</span>
-              <span>95%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[95%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Semantic structure, forms, accessibility basics</p>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Tailwind CSS</span>
-              <span>85%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[85%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Responsive layouts, utility-first styling, components</p>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">JavaScript</span>
-              <span>75%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">DOM manipulation, events, basic logic & interactivity</p>
-          </div>
-
-        </div>
-
-        <!-- LANGUAGES -->
-        <div id="languages" class="hidden grid md:grid-cols-2 gap-8 text-gray-300">
-
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Java</span>
-              <span>75%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">OOP concepts, collections, problem solving, JDBC basics</p>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Python</span>
-              <span>80%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[80%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">Core programming, scripting, backend basics</p>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
-            <div class="flex justify-between mb-2">
-              <span class="font-semibold text-white">Django</span>
-              <span>60%</span>
-            </div>
-            <div class="w-full bg-gray-700 h-2 rounded-full">
-              <div class="bg-red-600 h-2 rounded-full w-[60%]"></div>
-            </div>
-            <p class="text-sm mt-3 text-gray-400">MVC architecture, auth, forms, REST basics</p>
-          </div>
-
-        </div>
-
-        <!-- EDUCATION -->
-        <div id="education" class="hidden space-y-8 text-gray-300">
-
-          <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between flex-wrap gap-2">
-              <h3 class="text-white font-semibold text-lg">Bachelor of Information Technology</h3>
-              <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2023 – 2026</span>
-            </div>
-            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
-              <li>Strong programming foundation</li>
-              <li>Data Structures, DBMS, Web Technologies</li>
-            </ul>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-6 rounded-xl shadow-lg">
-            <div class="flex justify-between flex-wrap gap-2">
-              <h3 class="text-white font-semibold text-lg">Master of Computer Applications</h3>
-              <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2026 – 2028</span>
-            </div>
-            <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
-              <li>Advanced software development</li>
-              <li>Focus on Java, Python, backend systems</li>
-            </ul>
-          </div>
-
-        </div>
-
+      <button id="education-btn"
+        class="tab-btn relative text-lg font-medium text-gray-400 pb-2
+               after:content-[''] after:absolute after:left-0 after:bottom-0
+               after:h-[2px] after:w-full after:bg-red-500 after:scale-x-0 after:origin-left after:transition-transform">
+        Education
+      </button>
     </div>
 
+    <!-- TAB CONTENT -->
+    <div class="mt-12">
+
+      <!-- FRONTEND -->
+      <div id="frontend" class="grid md:grid-cols-2 gap-8 text-gray-300">
+
+        <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">HTML</span><span>95%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[95%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">Semantic structure, forms, accessibility</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">Tailwind CSS</span><span>85%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[85%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">Responsive layouts, utility-first design</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">JavaScript</span><span>75%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">DOM, events, interactivity</p>
+        </div>
+
+      </div>
+
+      <!-- LANGUAGES -->
+      <div id="languages" class="hidden grid md:grid-cols-2 gap-8 text-gray-300">
+
+        <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">Java</span><span>75%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[75%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">OOP, collections, problem solving</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="150" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">Python</span><span>80%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[80%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">Core programming, scripting</p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="300" class="bg-gray-900 p-6 rounded-xl shadow-lg hover:-translate-y-2 transition">
+          <div class="flex justify-between mb-2">
+            <span class="font-semibold text-white">Django</span><span>60%</span>
+          </div>
+          <div class="w-full bg-gray-700 h-2 rounded-full">
+            <div class="bg-red-600 h-2 rounded-full w-[60%]"></div>
+          </div>
+          <p class="text-sm mt-3 text-gray-400">MVC, auth, forms</p>
+        </div>
+
+      </div>
+
+      <!-- EDUCATION -->
+      <div id="education" class="hidden space-y-8 text-gray-300">
+
+        <div data-aos="fade-up" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+          <div class="flex justify-between flex-wrap gap-2">
+            <h3 class="text-white font-semibold text-lg">Bachelor of Information Technology</h3>
+            <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2023 – 2026</span>
+          </div>
+          <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
+            <li>Strong programming foundation</li>
+            <li>Data Structures, DBMS, Web Technologies</li>
+          </ul>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="200" class="bg-gray-900 p-6 rounded-xl shadow-lg">
+          <div class="flex justify-between flex-wrap gap-2">
+            <h3 class="text-white font-semibold text-lg">Master of Computer Applications</h3>
+            <span class="text-sm bg-red-600 px-3 py-1 rounded-full text-white">2026 – 2028</span>
+          </div>
+          <ul class="mt-4 space-y-2 list-disc list-inside text-gray-400 text-sm">
+            <li>Advanced software development</li>
+            <li>Focus on Java, Python, backend systems</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </section>
-
 
 <!-- ================= CONTACT ================= -->
 <section id="contact" class="py-20">
